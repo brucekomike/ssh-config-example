@@ -1,0 +1,17 @@
+Include ~/.ssh/config.d/*
+#ProxyCommand /usr/bin/nc -X 5 -x 127.0.0.1:7890 %h %p
+#Host *
+  #ServerAliveInterval 120
+  #TCPKeepAlive no
+  #IPQoS throughput
+  #MACs hmac-sha1-96-etm@openssh.com,hmac-sha2-512
+Host *
+  #RemoteForward 12321 127.0.0.1:2080
+  ServerAliveInterval 120
+  TCPKeepAlive no
+  ServerAliveCountMax 3
+
+Host 192.168.*.*
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+

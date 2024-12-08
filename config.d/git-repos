@@ -1,0 +1,11 @@
+Host github
+  #ProxyCommand /usr/bin/nc -X 5 -x 127.0.0.1:2080 %h %p
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/keys/github
+
+Host github
+  #ProxyCommand /usr/bin/nc -X 5 -x 127.0.0.1:2080 %h %p
+  HostName gitlab.com
+  User git
+  IdentityFile ~/.ssh/keys/gitlab
